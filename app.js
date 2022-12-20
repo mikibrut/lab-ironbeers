@@ -26,10 +26,10 @@ app.get('/', (req, res) => {
 
 app.get('/beers', (req, res) => {
   punkAPI.getBeers()
-  .then(beers => {console.log(beers[0])
+  .then(beers => {
     res.render('beers', {b: beers})
   })
-  .catch(error => {console.log(error)
+  .catch(error => {
     res.render('page500')
   })
 });
